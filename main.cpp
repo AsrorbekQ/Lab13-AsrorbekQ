@@ -99,6 +99,38 @@ int main() {
     }
     cout << endl;
 
+
+    cout << "Problem 6\n";
+    forward_list<int> f_list = {1, 2, 3, 4};
+    f_list.erase_after(f_list.front());
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+    f_list.push_front(2);
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+
+    f_list.emplace_front(f_list.begin(), 5);
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+
+    f_list.pop_front();
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+
+    f_list.insert_after(f_list.begin(), 6);
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+
+    f_list.emplace_after(f_list.end(), 7);
+    for (int nut : f_list) {
+        cout << nut << " ";
+    }
+
     cout << "Problem 7\n";
     deque<int> deq;
     deq.push_back(5);
@@ -120,7 +152,7 @@ int main() {
         cout<<deq[e]<<endl;
     }
 
-    cout << "Problem 8\n";
+//    cout << "Problem 8\n";
 //    forward_list<int> forward_list;
 //    for (int i = 5; i > 0; --i) {
 //        forward_list.push_front(i);
